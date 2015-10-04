@@ -1,7 +1,7 @@
 # Kapitel 3 Übung 2 ("Kundenrabatt")
 
 - Schreiben Sie ein Programm, welches einen Kundenrabatt für eine Bestellung ermittelt. Als Ausgangswerte nehmen Sie:
-  - Zwei ```double```-Variablen namens ```bestellwert``` und ```bisherigesKundenBestellvolumen```
+  - Zwei ```double```-Variablen namens ```bestellwert``` und ```bisherigesKundenBestellvolumen```
   - sowie eine ```boolean``` Variable ```istPremiumKunde```.
 - Der Rabatt soll in Prozent gemäß der Rabattstaffeln (siehe unten) ermittelt und ausgegeben werden.
 - Außerdem soll der Bestellwert vor und nach Rabattierung ausgegeben werden.
