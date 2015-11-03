@@ -26,8 +26,8 @@ public class Kundenrabatt {
 	
 	double rabattgesamt = rabattbw*rabattpk+rabattbv+rabattbonus;
 	
-	if (rabattgesamt>0.2&&(istPremiumKunde=true)) { System.out.println("Ihr Rabatt beträgt 20%"); } 
-	else { if (rabattgesamt>0.15&&(istPremiumKunde=false)) { System.out.println("Ihr Rabatt beträgt 15%"); }
+	if (rabattgesamt>0.2&&(istPremiumKunde==true)) { System.out.println("Ihr Rabatt beträgt 20%"); } 
+	else { if (rabattgesamt>0.15&&(istPremiumKunde==false)) { System.out.println("Ihr Rabatt beträgt 15%"); }
 	else { System.out.println("Ihr Rabatt beträgt " + rabattgesamt*100 + "%"); }}
 	}
 	
