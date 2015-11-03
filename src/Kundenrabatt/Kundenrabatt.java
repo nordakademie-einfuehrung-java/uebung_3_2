@@ -4,71 +4,71 @@ public class Kundenrabatt {
 
 	public static void main(String[] args) {
 		
-		double Bestellwert = 5544;
-		double bisherigesKundenBestellvolumen = 10000;
-		double Mengenrabatt = 0;
-		double Treuerabatt = 0 ;
-		double Bonusrabatt = 0 ;
+		double bestellwert = 5544;
+		double bestellvolumen = 10000;
+		boolean istpremiumkunde = false;
 		
-		boolean istPremiumkunde = true;
+		double mengenrabatt = 0;
+		double treuerabatt = 0 ;
+		double bonusabatt = 0 ;
 		
+				
 		// 1. Mengenrabatt
-		if (Bestellwert>=5000) {
-					Mengenrabatt = 0.05;}
+		if (bestellwert>=5000) {
+					mengenrabatt = 0.05;}
 		
-			else if (Bestellwert>=2000) {
-					Mengenrabatt = 0.03;}
+			else if (bestellwert>=2000) {
+				mengenrabatt = 0.03;}
 		
-			else if (Bestellwert>=500) {
-					Mengenrabatt = 0.02;}
+			else if (bestellwert>=500) {
+				mengenrabatt = 0.02;}
 			
-			
-			else if (Bestellwert>=100) {
-					Mengenrabatt = 0.01 ;}
+			else if (bestellwert>=100) {
+				mengenrabatt = 0.01 ;}
 		
-		if (istPremiumkunde = true) {
-					Mengenrabatt = Mengenrabatt*2;}
+		if (istpremiumkunde == true) {
+			mengenrabatt = mengenrabatt*2;}
 		     
-			else if (istPremiumkunde = false) {
-			      	Mengenrabatt = Mengenrabatt*1;}
+			else if (istpremiumkunde == false) {
+				mengenrabatt = mengenrabatt;}
 		
 		// 2. Treuerabatt
-		if (bisherigesKundenBestellvolumen>= 50000) {
-					Treuerabatt = 0.125; }
+		if (bestellvolumen>= 50000) {
+			treuerabatt = 0.125; }
 		
-		    else if (bisherigesKundenBestellvolumen>= 10000) {
-			       	Treuerabatt = 0.075; }
+		    else if (bestellvolumen>= 10000) {
+		    	treuerabatt = 0.075; }
 		
 		// 3. Bonusrabatt
-		if (Bestellwert>= bisherigesKundenBestellvolumen*2) {
-					Bonusrabatt = 0.03;}
+		if (bestellwert>= bestellvolumen*2) {
+			bonusabatt = 0.03;}
 			
-			else if (Bestellwert<= bisherigesKundenBestellvolumen*2) {
-					Bonusrabatt = 0;}
+			else if (bestellwert<= bestellvolumen*2) {
+				bonusabatt = 0;}
 		
 		// 4. Gesamtrabatt
-		double Gesamtrabatt = Mengenrabatt + Treuerabatt + Bonusrabatt;
+		double gesamtrabatt = mengenrabatt + treuerabatt + bonusabatt;
 		
-		if (Gesamtrabatt >= 0.15) {
-					Gesamtrabatt = 0.15;}
+		if (gesamtrabatt >= 0.15) {
+					gesamtrabatt = 0.15;}
 		
-			else if (Gesamtrabatt <= 0.15) {
-					Gesamtrabatt = Gesamtrabatt;}
+			else if (gesamtrabatt <= 0.15) {
+					gesamtrabatt = gesamtrabatt;}
 		
-		if (istPremiumkunde = true && Gesamtrabatt >= 0.20){
-					Gesamtrabatt = 0.20;}
+		if (istpremiumkunde == true && gesamtrabatt >= 0.20){
+					gesamtrabatt = 0.20;}
 			
-			else if (istPremiumkunde = true && Gesamtrabatt <= 0.20) {
-				Gesamtrabatt = Gesamtrabatt;}
+			else if (istpremiumkunde == true && gesamtrabatt <= 0.20) {
+				gesamtrabatt = gesamtrabatt;}
 		
 		// 5. Teilrabattanwendungen
 		 
-		double Preis = (1-Gesamtrabatt) * Bestellwert;
+		double Preis = (1-gesamtrabatt) * bestellwert;
 		
 		// letzter Schritt --> was wird ausgegeben
 		
-		System.out.println("Gesamtrabatt = " + Gesamtrabatt * 100 + "%");
-		System.out.println("Bestellwert ohne Rabatt = " + Bestellwert + "€");
+		System.out.println("Gesamtrabatt = " + gesamtrabatt * 100 + "%");
+		System.out.println("Bestellwert ohne Rabatt = " + bestellwert + "€");
 		System.out.println( "Bestellwert mit Rabatt = " + Preis + "€" );
 			
 		
